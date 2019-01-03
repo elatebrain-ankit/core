@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Backend\Block\Widget\Grid" name="adminhtml.extensioninfo.grid" as="grid">
+                <arguments>
+                    <argument name="id" xsi:type="string">extensioninfo_grid</argument>
+                    <argument name="dataSource" xsi:type="object">Elatebrain\Core\Model\ExtensionInfo\ResourceModel\Grid\Collection</argument>
+                    <argument name="pager_visibility" xsi:type="string">0</argument>
+                </arguments>
+                <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" name="adminhtml.extensioninfo.grid.columnSet" as="grid.columnSet">
+                    <arguments>
+                        <argument name="filter_visibility" xsi:type="string">0</argument>
+                    </arguments>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.extensioninfo.grid.columnSet.extension_name" as="name">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Extension Name</argument>
+                            <argument name="index" xsi:type="string">name</argument>
+                            <argument name="type" xsi:type="string">text</argument>
+                            <argument name="width" xsi:type="string">200</argument>
+                            <argument name="align" xsi:type="string">left</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="translate" xsi:type="boolean">true</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.extensioninfo.grid.columnSet.installed_version" as="installedversion">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Installed Version</argument>
+                            <argument name="index" xsi:type="string">installedversion</argument>
+                            <argument name="type" xsi:type="string">text</argument>
+                            <argument name="width" xsi:type="string">200</argument>
+                            <argument name="align" xsi:type="string">left</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="translate" xsi:type="boolean">true</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.extensioninfo.grid.columnSet.latest_version" as="latestversion">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Latest Version</argument>
+                            <argument name="index" xsi:type="string">latestversion</argument>
+                            <argument name="type" xsi:type="string">text</argument>
+                            <argument name="width" xsi:type="string">200</argument>
+                            <argument name="align" xsi:type="string">left</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="translate" xsi:type="boolean">true</argument>
+                        </arguments>
+                    </block>
+                    <block class="Elatebrain\Core\Block\ExtensionInfo\Grid\Column\Statuses" name="adminhtml.extensioninfo.grid.columnSet.version_status" as="version_status">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Version Status</argument>
+                            <argument name="index" xsi:type="string">version_status</argument>
+                            <argument name="type" xsi:type="string">options</argument>
+                            <argument name="width" xsi:type="string">50</argument>
+                            <argument name="align" xsi:type="string">left</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="options" xsi:type="array">
+                                <item name="disabled" xsi:type="array">
+                                    <item name="value" xsi:type="string">0</item>
+                                    <item name="label" xsi:type="string" translate="true">Out Dated</item>
+                                </item>
+                                <item name="enabled" xsi:type="array">
+                                    <item name="value" xsi:type="string">1</item>
+                                    <item name="label" xsi:type="string" translate="true">Up To Date</item>
+                                </item>
+                            </argument>
+                        </arguments>
+                    </block>
+                    <block class="Elatebrain\Core\Block\ExtensionInfo\Grid\Column\Statuses" name="adminhtml.extensioninfo.grid.columnSet.extension_status" as="extension_status">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Status</argument>
+                            <argument name="index" xsi:type="string">status</argument>
+                            <argument name="type" xsi:type="string">options</argument>
+                            <argument name="width" xsi:type="string">50</argument>
+                            <argument name="align" xsi:type="string">left</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="options" xsi:type="array">
+                                <item name="disabled" xsi:type="array">
+                                    <item name="value" xsi:type="string">0</item>
+                                    <item name="label" xsi:type="string" translate="true">Disabled</item>
+                                </item>
+                                <item name="enabled" xsi:type="array">
+                                    <item name="value" xsi:type="string">1</item>
+                                    <item name="label" xsi:type="string" translate="true">Enabled</item>
+                                </item>
+                            </argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
