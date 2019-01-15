@@ -45,7 +45,7 @@
                             <argument name="translate" xsi:type="boolean">true</argument>
                         </arguments>
                     </block>
-                    <block class="Elatebrain\Core\Block\ExtensionInfo\Grid\Column\Statuses" name="adminhtml.extensioninfo.grid.columnSet.version_status" as="version_status">
+                    <block class="Elatebrain\Core\Block\Adminhtml\ExtensionInfo\Grid\Column\Statuses" name="adminhtml.extensioninfo.grid.columnSet.version_status" as="version_status">
                         <arguments>
                             <argument name="header" xsi:type="string" translate="true">Version Status</argument>
                             <argument name="index" xsi:type="string">version_status</argument>
@@ -65,7 +65,7 @@
                             </argument>
                         </arguments>
                     </block>
-                    <block class="Elatebrain\Core\Block\ExtensionInfo\Grid\Column\Statuses" name="adminhtml.extensioninfo.grid.columnSet.extension_status" as="extension_status">
+                    <block class="Elatebrain\Core\Block\Adminhtml\ExtensionInfo\Grid\Column\Statuses" name="adminhtml.extensioninfo.grid.columnSet.extension_status" as="extension_status">
                         <arguments>
                             <argument name="header" xsi:type="string" translate="true">Status</argument>
                             <argument name="index" xsi:type="string">status</argument>

@@ -3,6 +3,9 @@ namespace Elatebrain\Core\Controller\Adminhtml;
 
 use Magento\Backend\App\Action;
 
+/**
+ *
+ */
 abstract class Index extends \Magento\Backend\App\Action
 {
     /**
@@ -16,12 +19,13 @@ abstract class Index extends \Magento\Backend\App\Action
     protected $resultForwardFactory;
 
     /**
-     * @var \Magento\Backend\Model\View\Result\ForwardFactory
+     * @var
      */
     protected $bannerFactory;
 
     /**
-     * Constructor
+     * Index constructor.
+     * @param Action\Context $context
      * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      * @param \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
      */

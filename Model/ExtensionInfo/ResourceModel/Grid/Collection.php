@@ -6,8 +6,12 @@
 namespace Elatebrain\Core\Model\ExtensionInfo\ResourceModel\Grid;
 
 
+/**
+ *
+ */
 class Collection extends \Magento\Framework\Data\Collection
 {
+
     /**
      * @var \Magento\Framework\Module\ModuleListInterface
      */
@@ -24,7 +28,7 @@ class Collection extends \Magento\Framework\Data\Collection
     protected $_moduleManager;
 
     /**
-     * @var String
+     * @var string
      */
     protected $_extensionProvider = "Elatebrain";
 
@@ -34,10 +38,12 @@ class Collection extends \Magento\Framework\Data\Collection
     protected $_helperExtensionInfo;
 
     /**
+     * Collection constructor.
      * @param \Magento\Framework\Data\Collection\EntityFactory $entityFactory
      * @param \Magento\Framework\Module\ModuleListInterface $fullModuleList
+     * @param \Magento\Framework\Module\Manager $moduleManager
      * @param \Magento\Framework\Module\ResourceInterface $resource
-     * @param \Magento\Framework\Module\Manager $resource
+     * @param \Elatebrain\Core\Helper\ExtensionInfo $extensionInfo
      */
     public function __construct(
         \Magento\Framework\Data\Collection\EntityFactory $entityFactory,
@@ -55,12 +61,10 @@ class Collection extends \Magento\Framework\Data\Collection
     }
 
     /**
-     * Load data
-     *
      * @param bool $printQuery
      * @param bool $logQuery
-     * @return $this
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @return $this|\Magento\Framework\Data\Collection
+     * @throws \Exception
      */
     public function loadData($printQuery = false, $logQuery = false)
     {

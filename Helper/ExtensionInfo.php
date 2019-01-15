@@ -1,9 +1,18 @@
 <?php
 namespace Elatebrain\Core\Helper;
+/**
+ *
+ */
 class ExtensionInfo extends \Magento\Framework\App\Helper\AbstractHelper
 {
+    /**
+     *
+     */
     const EXTENSION_FEED_URL = "http://www.elatebrain.com/feed/extension-feed.json";
 
+    /**
+     * @return mixed
+     */
     public function getExtensionFeed()
     {
         $curl = curl_init(self::EXTENSION_FEED_URL);
@@ -17,6 +26,9 @@ class ExtensionInfo extends \Magento\Framework\App\Helper\AbstractHelper
         return $extensionFeed;
     }
 
+    /**
+     * @return array
+     */
     public function getExtensionArray()
     {
         $latestExtensionList = $this->getExtensionFeed();

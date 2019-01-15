@@ -26,6 +26,14 @@
                     <resource id="Elatebrain_Core::documentation" title="Documentation" sortOrder="90" />
                     <resource id="Elatebrain_Core::extensioninfo" title="Extension Info" sortOrder="90" />
                 </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Elatebrain_Core::DocumentationConfiguration" title="Elatebrain Documentation" sortOrder="0" />
+                            <resource id="Elatebrain_Core::SystemConfiguration" title="Elatebrain System" sortOrder="10" />
+                        </resource>
+                    </resource>
+                </resource>
             </resource>
         </resources>
     </acl>
