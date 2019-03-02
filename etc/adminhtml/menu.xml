@@ -20,7 +20,7 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Elatebrain_Core::elatebrain" title="Elatebrain" translate="title" module="Elatebrain_Core" sortOrder="80" resource="Elatebrain_Core::core"/>
+        <add id="Elatebrain_Core::elatebrain" title="Elatebrain" module="Elatebrain_Core" sortOrder="80" resource="Elatebrain_Core::core"/>
         <add id="Elatebrain_Core::documentation" title="Documentation" module="Elatebrain_Core" sortOrder="90" parent="Elatebrain_Core::elatebrain" resource="Elatebrain_Core::documentation"/>
         <add id="Elatebrain_Core::extensioninfo" title="Extension Info" module="Elatebrain_Core" sortOrder="90" parent="Elatebrain_Core::documentation" action="ebcore/extensioninfo/index" resource="Elatebrain_Core::extensioninfo"/>
     </menu>
